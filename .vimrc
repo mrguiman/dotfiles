@@ -1,4 +1,6 @@
 " Enable syntax highlighting
 syntax on
-" Automatic indentation for python
+" Line Number
+set number
+" Automatic indentation
 filetype indent plugin on
