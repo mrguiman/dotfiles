@@ -29,5 +29,15 @@ git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vi
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 ```
 
+4. Better Javascript Syntax Highlighting
+```
+git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
+```
+
+5. Syntax Highlighting for JSX
+```
+git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
+```
+
 # Notes
 * .zshrc defines an alias to run python3 when typing python

@@ -18,10 +18,15 @@ set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,space:.
 hi SpecialKey ctermfg=238 guifg=#262626 ctermbg=NONE
 " Automatic indentation
 filetype indent plugin on
-" Use tabs when pressing tabs on python files
-augroup python_files
+" Use tabs when pressing tab
+augroup indentation
 	autocmd!
-	autocmd FileType python setlocal noexpandtab
-	autocmd FileType python set tabstop=4
+	autocmd FileType python setlocal noexpandtab " Don't make spaces out of tabs
+	autocmd FileType python set tabstop=4 " Number of visual spaces per tab
 	autocmd FileType python set shiftwidth=4
+	autocmd FileType javascript setlocal noexpandtab " Don't make spaces out of tabs
+	autocmd FileType javascript set tabstop=4 " Number of visual spaces per tab
+	autocmd FileType javascript set shiftwidth=2
 augroup END
+" Enable JSX syntax highlighting for .js files
+let g:jsx_ext_required = 0
