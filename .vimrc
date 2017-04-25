@@ -9,6 +9,9 @@ colorscheme solarized
 set number
 " Automatic indentation
 filetype indent plugin on
+" Start NERDTree with vim if no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Whitespace characters
 set list
 set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,space:.
