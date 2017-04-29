@@ -47,3 +47,20 @@ git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javas
 ```
 git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 ```
+
+# Misc Shortcuts
+These are shortcuts that I once (or regularly) search for on the web and I need for my workflow. Not exhaustive.
+
+|                       | NERDTree | VIM     | iTerm2       |
+|-----------------------|----------|---------|--------------|
+| Add File              | m a      |         |              |
+| Copy File             | m c      |         |              |
+| Delete File           | m d      |         |              |
+| Move File             | m m      |         |              |
+| New Horizontal Panel  |          | :sp     | SHIFT+CMD+d  |
+| New Vertical Panel    |          | :vsp    | CMD+d        |
+| Close Panel           |          | :q      | CMD+w        |
+| Cycle Panels          |          | ctrl+ww |              |
+| Switch to Left Panel  |          | ctrl+wh | CMD+[        |
+| Switch to Right Panel |          | ctrl+wl | CMD+]        |
+| Newline above         |          |         | O (Normal)   |
