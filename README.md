@@ -8,8 +8,17 @@
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-* Install additional fonts for zsh agnoster theme
+* Install additional fonts for zsh
+```
 https://github.com/powerline/fonts
+```
+
+* Powerlevel9k
+```
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+```
+
+* .itermcolors Color Sheme included (based on Atom's OneDark)
 
 # VIM
 
@@ -19,14 +28,14 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
-2. Install solarized with pathogen
-```
-git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
-```
-
-3. Install NERDTree with pathogen
+2. Install NERDTree with pathogen
 ```
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+```
+
+3. Get onedark.vim and place it inside ~/.vim/colors/
+```
+https://github.com/joshdick/onedark.vim/
 ```
 
 4. Better Javascript Syntax Highlighting
@@ -38,6 +47,3 @@ git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javas
 ```
 git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 ```
-
-# Notes
-* .zshrc defines an alias to run python3 when typing python
