@@ -19,6 +19,9 @@ set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,space:.
 hi SpecialKey ctermfg=238 guifg=#262626 ctermbg=NONE
 " Automatic indentation
 filetype indent plugin on
+" Enable JSX syntax highlighting for .js files
+let g:jsx_ext_required = 0
+
 " Use tabs when pressing tab
 augroup indentation
 	autocmd!
@@ -29,5 +32,6 @@ augroup indentation
 	autocmd FileType javascript set tabstop=4 " Number of visual spaces per tab
 	autocmd FileType javascript set shiftwidth=2
 augroup END
-" Enable JSX syntax highlighting for .js files
-let g:jsx_ext_required = 0
+augroup python
+	au BufNewFile *.py 0r ~/vim/skeleton.py
+augroup end

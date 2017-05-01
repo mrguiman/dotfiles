@@ -1,9 +1,10 @@
 # Ignore everything
-*
+/*
 
 # Except...
 !.gitignore
 !.vimrc
 !.zshrc
 !README.md
-!OneDark-Variation.itermcolors
+!OneDark-Variation.itermcolor
+!/vim
