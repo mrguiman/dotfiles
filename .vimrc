@@ -25,12 +25,12 @@ let g:jsx_ext_required = 0
 " Use tabs when pressing tab
 augroup indentation
 	autocmd!
-	autocmd FileType python setlocal noexpandtab " Don't make spaces out of tabs
+	autocmd FileType python setlocal expandtab " Insert spaces for tabs
 	autocmd FileType python set tabstop=4 " Number of visual spaces per tab
-	autocmd FileType python set shiftwidth=4
-	autocmd FileType javascript setlocal noexpandtab " Don't make spaces out of tabs
+	autocmd FileType python set shiftwidth=4 " Number of spaces vim uses when indenting
+	autocmd FileType javascript setlocal expandtab " Insert spaces for tabs
 	autocmd FileType javascript set tabstop=4 " Number of visual spaces per tab
-	autocmd FileType javascript set shiftwidth=2
+	autocmd FileType javascript set shiftwidth=4 " Number of spaces vim uses when indenting
 augroup END
 augroup python
 	au BufNewFile *.py 0r ~/vim/skeleton.py

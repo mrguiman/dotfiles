@@ -64,3 +64,4 @@ These are shortcuts that I once (or regularly) search for on the web and I need 
 | Switch to Left Panel  |          | ctrl+wh | CMD+[        |
 | Switch to Right Panel |          | ctrl+wl | CMD+]        |
 | Newline above         |          |         | O (Normal)   |
+| Reindent File         |          | gg=G    | O (Normal)   |
