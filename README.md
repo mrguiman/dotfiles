@@ -48,6 +48,13 @@ git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javas
 git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 ```
 
+6. Autocompletion for python with jedi-vim
+```
+git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
+cd ~/.vim/bundle/jedi-vim
+git submodule update --init
+```
+
 # Misc Shortcuts
 These are shortcuts that I once (or regularly) search for on the web and I need for my workflow. Not exhaustive.
 
