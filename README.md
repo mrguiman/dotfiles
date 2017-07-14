@@ -53,7 +53,7 @@ git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 git clone https://github.com/hail2u/vim-css3-syntax ~/.vim/bundle/vim-css3-syntax
 ```
 
-6. Autocompletion for python with jedi-vim
+7. Autocompletion for python with jedi-vim
 ```
 git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
 cd ~/.vim/bundle/jedi-vim
@@ -76,4 +76,4 @@ These are shortcuts that I once (or regularly) search for on the web and I need 
 | Switch to Left Panel  |          | ctrl+wh | CMD+[        |
 | Switch to Right Panel |          | ctrl+wl | CMD+]        |
 | Newline above         |          |         | O (Normal)   |
-| Reindent File         |          | gg=G    | O (Normal)   |
+| Reindent File         |          | gg=G    |              |
