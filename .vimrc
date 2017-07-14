@@ -22,7 +22,7 @@ filetype indent plugin on
 " Enable JSX syntax highlighting for .js files
 let g:jsx_ext_required = 0
 
-" Use tabs when pressing tab
+" Define indentation per file type
 augroup indentation
 	autocmd!
 	autocmd FileType python setlocal expandtab " Insert spaces for tabs
@@ -31,6 +31,13 @@ augroup indentation
 	autocmd FileType javascript setlocal expandtab " Insert spaces for tabs
 	autocmd FileType javascript set tabstop=4 " Number of visual spaces per tab
 	autocmd FileType javascript set shiftwidth=4 " Number of spaces vim uses when indenting
+	autocmd FileType html setlocal expandtab " Insert spaces for tabs
+	autocmd FileType html set tabstop=4 " Number of visual spaces per tab
+	autocmd FileType html set shiftwidth=4 " Number of spaces vim uses when indenting
+
+	autocmd FileType scss setlocal expandtab " Insert spaces for tabs
+	autocmd FileType scss set tabstop=2 " Number of visual spaces per tab
+	autocmd FileType scss set shiftwidth=2 " Number of spaces vim uses when indenting
 augroup END
 augroup python
 	au BufNewFile *.py 0r ~/vim/skeleton.py

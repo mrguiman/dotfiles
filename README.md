@@ -48,6 +48,11 @@ git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javas
 git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 ```
 
+6. Syntax highlighting for SCSS
+```
+git clone https://github.com/hail2u/vim-css3-syntax ~/.vim/bundle/vim-css3-syntax
+```
+
 6. Autocompletion for python with jedi-vim
 ```
 git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
