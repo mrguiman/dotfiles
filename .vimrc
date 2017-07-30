@@ -42,3 +42,7 @@ augroup END
 augroup python
 	au BufNewFile *.py 0r ~/vim/skeleton.py
 augroup end
+
+" Cut / Copy from Visual Mode to system clipboard
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
