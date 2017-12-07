@@ -5,7 +5,7 @@ syntax enable
 " Color Scheme
 set background=dark
 let g:onedark_termcolors=16
-colorscheme onedark
+colorscheme onedarkafterglow
 " Line Number
 set number
 " Start NERDTree with vim if no file is specified
