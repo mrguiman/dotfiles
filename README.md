@@ -1,5 +1,5 @@
 # Screenshot
-![Screenshot](http://i.imgur.com/Wje1Fbg.png)
+![Screenshot](https://i.imgur.com/XL9eeAH.png)
 
 # iTerm2
 
@@ -31,9 +31,9 @@ CMD Line: vim +PluginInstall qall
 From vim: :PluginInstall
 ```
 
-3. Get onedark.vim and place it inside ~/.vim/colors/
+3. Get onedarkafterglow.vim and place it inside ~/.vim/colors/	| Install OneDark-Afterglow.itermcolors for iTerm2
 ```
-https://github.com/joshdick/onedark.vim/
+https://github.com/MrGuiMan/onedark-afterglow.vim/
 ```
 
 
