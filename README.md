@@ -18,19 +18,17 @@ https://github.com/powerline/fonts
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 ```
 
-* .itermcolors Color Sheme included (based on Atom's OneDark)
-
 # VIM
 
-1. Install vim-pathogen
+1. Install Vundle
 ```
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-2. Install NERDTree with pathogen
+2. Install Plugins
 ```
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+CMD Line: vim +PluginInstall qall
+From vim: :PluginInstall
 ```
 
 3. Get onedark.vim and place it inside ~/.vim/colors/
@@ -38,27 +36,6 @@ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 https://github.com/joshdick/onedark.vim/
 ```
 
-4. Better Javascript Syntax Highlighting
-```
-git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
-```
-
-5. Syntax Highlighting for JSX
-```
-git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
-```
-
-6. Syntax highlighting for SCSS
-```
-git clone https://github.com/hail2u/vim-css3-syntax ~/.vim/bundle/vim-css3-syntax
-```
-
-7. Autocompletion for python with jedi-vim
-```
-git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
-cd ~/.vim/bundle/jedi-vim
-git submodule update --init
-```
 
 # Misc Shortcuts
 These are shortcuts that I once (or regularly) search for on the web and I need for my workflow. Not exhaustive.

@@ -1,5 +1,20 @@
-" Enable Pathogen (enables packages located in ~/.vim/bundle)
-execute pathogen#infect()
+set nocompatible        " be iMproved, required (Vundle)
+filetype off            " required (Vundle)
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'rust-lang/rust.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
 " Enable syntax highlighting
 syntax enable
 " Color Scheme
