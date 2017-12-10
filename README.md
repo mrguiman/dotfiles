@@ -35,7 +35,14 @@ From vim: :PluginInstall
 ```
 https://github.com/MrGuiMan/onedark-afterglow.vim/
 ```
-
+4. Follow the guide to properly install YouCompleteMe (code completion engine)
+```
+https://github.com/Valloric/YouCompleteMe#full-installation-guide
+```
+Don't forget to have a local copy of rust's source code
+```
+rustup component add rust-src
+```
 
 # Misc Shortcuts
 These are shortcuts that I once (or regularly) search for on the web and I need for my workflow. Not exhaustive.
