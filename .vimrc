@@ -14,6 +14,8 @@ Plugin 'sheerun/vim-polyglot'
 
 " Disable polyglot elm plugin to run diretly on elmcast/elm-vim
 let g:polyglot_disabled = ['elm']
+" Format elm files with elm-format on save
+let g:elm_format_autosave = 1
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,3 +68,10 @@ augroup end
 " Cut / Copy from Visual Mode to system clipboard
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
+
+" YouCompleteMe
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_auto_trigger = 1
+let g:ycm_semantic_triggers = {
+     \ 'elm' : ['.'],
+     \}
