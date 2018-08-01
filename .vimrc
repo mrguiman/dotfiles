@@ -11,6 +11,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'elmcast/elm-vim'
 Plugin 'avh4/elm-format'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'fatih/vim-go'
 
 " Disable polyglot elm plugin to run diretly on elmcast/elm-vim
 let g:polyglot_disabled = ['elm']
@@ -22,23 +23,30 @@ call vundle#end()            " required
 
 " Enable syntax highlighting
 syntax enable
+
 " Color Scheme
 set background=dark
 let g:onedark_termcolors=16
 colorscheme onedarkafterglow
+
 " Line Number
 set number
+
 " Start NERDTree with vim if no file is specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * GoInstallBinaries
+
 " Whitespace characters
 set list
 set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,space:.
 " Whitespace characters color
 " http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 hi SpecialKey ctermfg=238 guifg=#262626 ctermbg=NONE
+
 " Automatic indentation
 filetype indent plugin on
+
 " Enable JSX syntax highlighting for .js files
 let g:jsx_ext_required = 0
 
@@ -61,6 +69,8 @@ augroup indentation
 	autocmd Filetype elm set tabstop=4
 	autocmd Filetype elm set shiftwidth=4
 augroup END
+
+" Default template for python files
 augroup python
 	au BufNewFile *.py 0r ~/vim/skeleton.py
 augroup end
@@ -75,3 +85,4 @@ let g:ycm_auto_trigger = 1
 let g:ycm_semantic_triggers = {
      \ 'elm' : ['.'],
      \}
+let g:ycm_autoclose_preview_window_after_insertion = 1
