@@ -10,6 +10,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'fatih/vim-go'
+Plugin 'wincent/command-t'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,6 +70,7 @@ augroup end
 " Cut / Copy from Visual Mode to system clipboard
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
+nmap <silent> <C-p> <Plug>(CommandT)
 
 " YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 2

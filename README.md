@@ -35,10 +35,19 @@ From vim: :PluginInstall
 ```
 https://github.com/MrGuiMan/onedark-afterglow.vim/
 ```
+
 4. Follow the guide to properly install YouCompleteMe (code completion engine)
 ```
 https://github.com/Valloric/YouCompleteMe#full-installation-guide
 ```
+
+5. Compile Command-T
+```
+cd ~/.vim/bundle/command-t/ruby/command-t/ext/command-t
+ruby extconf.rb
+make
+```
+See [the Command-T documentation](https://github.com/wincent/command-t/blob/master/doc/command-t.txt) for a full guide.
 
 # Misc Shortcuts
 These are shortcuts that I once (or regularly) search for on the web and I need for my workflow. Not exhaustive.
@@ -57,3 +66,4 @@ These are shortcuts that I once (or regularly) search for on the web and I need 
 | Switch to Right Panel |          | ctrl+wl | CMD+]        |
 | Newline above         |          |         | O (Normal)   |
 | Reindent File         |          | gg=G    |              |
+| Bring up Command-T    |          | ctrl+p  |              |
