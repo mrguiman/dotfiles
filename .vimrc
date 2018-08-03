@@ -8,15 +8,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'elmcast/elm-vim'
-Plugin 'avh4/elm-format'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'fatih/vim-go'
-
-" Disable polyglot elm plugin to run diretly on elmcast/elm-vim
-let g:polyglot_disabled = ['elm']
-" Format elm files with elm-format on save
-let g:elm_format_autosave = 1
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -65,9 +58,6 @@ augroup indentation
 	autocmd FileType scss setlocal expandtab
 	autocmd FileType scss set tabstop=2
 	autocmd FileType scss set shiftwidth=2
-	autocmd FileType elm setlocal expandtab
-	autocmd Filetype elm set tabstop=4
-	autocmd Filetype elm set shiftwidth=4
 augroup END
 
 " Default template for python files
@@ -82,7 +72,4 @@ vmap <C-c> :w !pbcopy<CR><CR>
 " YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_auto_trigger = 1
-let g:ycm_semantic_triggers = {
-     \ 'elm' : ['.'],
-     \}
 let g:ycm_autoclose_preview_window_after_insertion = 1

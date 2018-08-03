@@ -39,10 +39,6 @@ https://github.com/MrGuiMan/onedark-afterglow.vim/
 ```
 https://github.com/Valloric/YouCompleteMe#full-installation-guide
 ```
-Don't forget to have a local copy of rust's source code
-```
-rustup component add rust-src
-```
 
 # Misc Shortcuts
 These are shortcuts that I once (or regularly) search for on the web and I need for my workflow. Not exhaustive.
