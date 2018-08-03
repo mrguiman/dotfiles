@@ -28,6 +28,7 @@ set number
 " Start NERDTree with vim if no file is specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Install Go Binaries for vim-go to work properly
 autocmd VimEnter * GoInstallBinaries
 
 " Whitespace characters
