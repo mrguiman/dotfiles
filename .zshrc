@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gitcleanbranch="git branch | grep -v "master" | xargs git branch -D"
 export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export PATH=$PATH:/usr/local/go/bin
 source /usr/local/bin/virtualenvwrapper.sh
 
