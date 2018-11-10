@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 source .pvtaliases
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jahz/.oh-my-zsh
+export ZSH=/home/gman/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -86,4 +86,9 @@ source $ZSH/oh-my-zsh.sh
 alias gitcleanbranch="git branch | grep -v "master" | xargs git branch -D"
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export PATH=$PATH:/usr/local/go/bin
 source /usr/local/bin/virtualenvwrapper.sh
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi

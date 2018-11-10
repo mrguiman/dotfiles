@@ -8,8 +8,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'sheerun/vim-polyglot'
 Plugin 'fatih/vim-go'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'wincent/command-t'
 
 " All of your Plugins must be added before the following line
@@ -38,6 +38,9 @@ set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,space:.
 " Whitespace characters color
 " http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 hi SpecialKey ctermfg=238 guifg=#262626 ctermbg=NONE
+
+" Backspace over everything
+set backspace=indent,eol,start
 
 " Automatic indentation
 filetype indent plugin on
@@ -76,3 +79,7 @@ nmap <silent> <C-p> <Plug>(CommandT)
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_auto_trigger = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" Disable polyglot on go files (conflicts with vim-go)
+" vim-go must be installed before polyglot
+let g:polyglot_disabled = ['go']
