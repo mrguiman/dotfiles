@@ -79,6 +79,7 @@ nmap <silent> <C-p> <Plug>(CommandT)
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_auto_trigger = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " Disable polyglot on go files (conflicts with vim-go)
 " vim-go must be installed before polyglot
