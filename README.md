@@ -52,18 +52,21 @@ See [the Command-T documentation](https://github.com/wincent/command-t/blob/mast
 # Misc Shortcuts
 These are shortcuts that I once (or regularly) search for on the web and I need for my workflow. Not exhaustive.
 
-|                       | NERDTree | VIM     | iTerm2       |
-|-----------------------|----------|---------|--------------|
-| Add File              | m a      |         |              |
-| Copy File             | m c      |         |              |
-| Delete File           | m d      |         |              |
-| Move File             | m m      |         |              |
-| New Horizontal Panel  |          | :sp     | SHIFT+CMD+d  |
-| New Vertical Panel    |          | :vsp    | CMD+d        |
-| Close Panel           |          | :q      | CMD+w        |
-| Cycle Panels          |          | ctrl+ww |              |
-| Switch to Left Panel  |          | ctrl+wh | CMD+[        |
-| Switch to Right Panel |          | ctrl+wl | CMD+]        |
-| Newline above         |          |         | O (Normal)   |
-| Reindent File         |          | gg=G    |              |
-| Bring up Command-T    |          | ctrl+p  |              |
+|                            | NERDTree | VIM     | iTerm2       | i3                             |
+|----------------------------|----------|---------|--------------|--------------------------------|
+| Add File                   | m a      |         |              |                                |
+| Copy File                  | m c      |         |              |                                |
+| Delete File                | m d      |         |              |                                |
+| Move File                  | m m      |         |              |                                |
+| New Horizontal Panel       |          | :sp     | SHIFT+CMD+d  | $mod1+h (then open new window) |
+| New Vertical Panel         |          | :vsp    | CMD+d        | $mod1+v (then open new window) |
+| Close Panel                |          | :q      | CMD+w        |                                |
+| Cycle Panels               |          | ctrl+ww |              |                                |
+| Switch to Left Panel       |          | ctrl+wh | CMD+[        | $mod1+j                        |
+| Switch to Right Panel      |          | ctrl+wl | CMD+]        | $mod1+m                        |
+| Switch to Top Panel        |          |         |              | $mod1+l                        |
+| Switch to Bottom Panel     |          |         |              | $mod1+k                        |
+| Switch to Parent Container |          |         |              | $mod1+a                        |
+| Newline above              |          |         | O (Normal)   |                                |
+| Reindent File              |          | gg=G    |              |                                |
+| Bring up Command-T         |          | ctrl+p  |              |                                |
