@@ -55,14 +55,27 @@ augroup indentation
 	autocmd FileType python set tabstop=4 " Number of visual spaces per tab
 	autocmd FileType python set shiftwidth=4 " Number of spaces vim uses when indenting
 	autocmd FileType javascript setlocal expandtab
-	autocmd FileType javascript set tabstop=4
-	autocmd FileType javascript set shiftwidth=4
+	autocmd FileType javascript set tabstop=2
+	autocmd FileType javascript set shiftwidth=2
 	autocmd FileType html setlocal expandtab
-	autocmd FileType html set tabstop=4
-	autocmd FileType html set shiftwidth=4
+	autocmd FileType html set tabstop=2
+	autocmd FileType html set shiftwidth=2
 	autocmd FileType scss setlocal expandtab
 	autocmd FileType scss set tabstop=2
 	autocmd FileType scss set shiftwidth=2
+	autocmd FileType css set shiftwidth=2
+	autocmd FileType css setlocal expandtab
+	autocmd FileType css set tabstop=2
+	autocmd FileType groovy setlocal expandtab
+	autocmd FileType groovy set tabstop=2
+	autocmd FileType groovy set shiftwidth=2
+	autocmd FileType vue set expandtab
+	autocmd FileType vue set tabstop=2
+	autocmd FIleType vue set shiftwidth=2
+augroup END
+
+augroup setfiletypes
+	au BufRead,BufNewFile *.vue set filetype=vue
 augroup END
 
 " Default template for python files
@@ -84,3 +97,6 @@ let g:ycm_server_python_interpreter = '/usr/bin/python'
 " Disable polyglot on go files (conflicts with vim-go)
 " vim-go must be installed before polyglot
 let g:polyglot_disabled = ['go']
+
+" https://github.com/posva/vim-vue#vim-slows-down-when-using-this-plugin-how-can-i-fix-that
+let g:vue_disable_pre_processors=1
