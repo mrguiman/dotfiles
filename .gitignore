@@ -7,4 +7,7 @@
 !.zshrc
 !README.md
 !/vim
-!.config/i3/*
+!/.config
+/.config/*
+!/.config/i3
+!/xorg.conf.d
