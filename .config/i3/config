@@ -15,6 +15,9 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 8
 
+# Use i3lock as X screen saver
+exec --no-startup-id xss-lock i3lock-fancy
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -136,7 +139,22 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # Lock screen using i3lock
-bindsym $mod+Ctrl+l exec i3lock
+bindsym $mod+Ctrl+l exec i3lock-fancy
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pactl list sinks short | cut -f1 | tail -n 1) +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pactl list sinks short | cut -f1 | tail -n 1) -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pactl list sinks short | cut -f1 | tail -n 1) toggle # mute sound
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
