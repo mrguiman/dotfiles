@@ -54,9 +54,9 @@ augroup indentation
 	autocmd FileType python setlocal expandtab " Insert spaces for tabs
 	autocmd FileType python set tabstop=4 " Number of visual spaces per tab
 	autocmd FileType python set shiftwidth=4 " Number of spaces vim uses when indenting
-	autocmd FileType javascript setlocal expandtab
-	autocmd FileType javascript set tabstop=2
-	autocmd FileType javascript set shiftwidth=2
+	autocmd FileType javascript,json setlocal expandtab
+	autocmd FileType javascript,json set tabstop=2
+	autocmd FileType javascript,json set shiftwidth=2
 	autocmd FileType html setlocal expandtab
 	autocmd FileType html set tabstop=2
 	autocmd FileType html set shiftwidth=2
