@@ -191,3 +191,11 @@ bar {
 
 # Disable title bars
 for_window [class="^.*"] border pixel 0
+# Set gaps
+gaps inner 10
+
+# Wallpaper
+exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
+
+# Compton
+exec compton
