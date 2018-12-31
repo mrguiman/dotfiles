@@ -5,6 +5,7 @@
 !.gitignore
 !.vimrc
 !.zshrc
+!.Xresources
 !README.md
 !/vim
 !/.config
