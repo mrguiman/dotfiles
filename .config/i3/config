@@ -33,7 +33,7 @@ exec --no-startup-id xss-lock i3lock-fancy
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill

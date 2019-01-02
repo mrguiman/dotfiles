@@ -11,4 +11,5 @@
 !/.config
 /.config/*
 !/.config/i3
+!/.config/compton.conf
 !/xorg.conf.d
