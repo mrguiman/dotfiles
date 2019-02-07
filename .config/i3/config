@@ -183,6 +183,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Screenshots
+bindsym $mod+Ctrl+4 exec maim -s ~/Pictures/$(date +%s).png
+
 # Polybar
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 
