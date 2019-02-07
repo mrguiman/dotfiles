@@ -12,4 +12,5 @@
 /.config/*
 !/.config/i3
 !/.config/compton.conf
+!/.config/polybar
 !/xorg.conf.d
