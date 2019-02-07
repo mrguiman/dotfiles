@@ -85,8 +85,8 @@ augroup python
 augroup end
 
 " Cut / Copy from Visual Mode to system clipboard
-vmap <C-x> :!pbcopy<CR>
-vmap <C-c> :w !pbcopy<CR><CR>
+vmap <C-c> "+y
+map <C-v> "+P
 nmap <silent> <C-p> <Plug>(CommandT)
 
 " YouCompleteMe
