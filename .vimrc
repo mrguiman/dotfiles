@@ -12,6 +12,7 @@ Plugin 'fatih/vim-go'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'wincent/command-t'
 Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -86,8 +87,8 @@ augroup end
 
 " Cut / Copy from Visual Mode to system clipboard
 vmap <C-c> "+y
-map <C-v> "+P
-nmap <silent> <C-p> <Plug>(CommandT)
+map <C-p> "+P
+nmap <silent> <C-t> <Plug>(CommandT)
 
 " YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 2
