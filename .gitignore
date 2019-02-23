@@ -8,6 +8,9 @@
 !.Xresources
 !README.md
 !/vim
+!/.vim
+/.vim/*
+!/.vim/colors
 !/.config
 /.config/*
 !/.config/i3
