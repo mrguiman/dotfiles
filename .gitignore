@@ -14,3 +14,4 @@
 !/.config/compton.conf
 !/.config/polybar
 !/xorg.conf.d
+!/.themes
