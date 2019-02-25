@@ -1,4 +1,4 @@
-URxvt*font: xft:FiraCode-Regular:size=11:antialias=true
+URxvt*font: xft:Fira Code::size=11:antialias=true,xft:Dejavu Sans Mono:size=11
 URxvt*scrollBar: False
 URxvt*background: #272C34
 URxvt*foreground: white
