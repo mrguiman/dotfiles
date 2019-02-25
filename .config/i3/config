@@ -185,11 +185,21 @@ bindsym $mod+Ctrl+4 exec maim -s ~/Pictures/$(date +%s).png
 # Polybar
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 
-# Disable title bars
-for_window [class="^.*"] border pixel 0
-
-# Set gaps
+# Title Bars / Borders / Gaps
+smart_borders on
 gaps inner 10
+
+# Color chooser
+# arch blue 	#1793D1
+# debian red	#D70A53
+# manjaro green #2ECC71
+# plasma green  #18B092
+# matrix green	#00FF00
+# mint green	#5FAA24
+# numix         #C84433
+# ubuntu orange #F37320
+# vertex dark   #2C6FF0
+client.focused #859900 #859900 #fdf6e3 #859900
 
 # Wallpaper
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg

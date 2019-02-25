@@ -18,3 +18,4 @@
 !/.config/polybar
 !/xorg.conf.d
 !/.themes
+!/.fonts
