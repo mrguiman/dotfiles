@@ -16,6 +16,7 @@
 !/.config/i3
 !/.config/compton.conf
 !/.config/polybar
+!/.config/rofi
 !/xorg.conf.d
 !/.themes
 !/.fonts
