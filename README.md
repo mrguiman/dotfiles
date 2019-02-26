@@ -1,7 +1,4 @@
-# Screenshot
-![Screenshot](https://i.imgur.com/XL9eeAH.png)
-
-# iTerm2
+# Shell Environment
 
 * Install Oh my ZSH
 ```
