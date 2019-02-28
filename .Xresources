@@ -1,8 +1,9 @@
 URxvt*font: xft:Fira Code::size=11:antialias=true,xft:Dejavu Sans Mono:size=11
 URxvt*scrollBar: False
 URxvt*background: #272C34
+URxvt*depth: 32
 URxvt*foreground: white
-URxvt.perl-ext-common:  default,matcher,selection-to-clipboard
+URxvt.perl-ext-common:  default,matcher,selection-to-clipboard,font-size
 URxvt.urlLauncher:      firefox
 URxvt.matcher.button:   3
 

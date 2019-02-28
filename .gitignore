@@ -20,3 +20,4 @@
 !/xorg.conf.d
 !/.themes
 !/.fonts
+!/.urxvt
