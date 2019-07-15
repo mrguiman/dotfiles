@@ -18,6 +18,11 @@ font pango:monospace 8
 # Use mantablockscreen as X screen saver
 exec --no-startup-id xss-lock mantablockscreen -- -cc
 
+# Gnome Support
+exec_always --no-startup-id gnome-power-manager
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id gnome-flashback
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -104,6 +109,11 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# Assign windows to workspace
+assign [class="Slack"] 
+assign [class="discord"] 
+assign [class="Cypress"] 
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -186,8 +196,8 @@ bindsym $mod+Ctrl+4 exec maim -s ~/Pictures/$(date +%s).png
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 
 # Disable title bars but keep a small border
-for_window [class="^.*"] border pixel 1
-client.focused #FFFFFF #FFFFFF #FFFFFF #FFFFFF
+for_window [class="^.*"] border pixel 2
+client.focused #AAAAAA #AAAAAA #AAAAAA #AAAAAA
 smart_borders on # no borders on single-container workspaces
 
 # Set gaps
