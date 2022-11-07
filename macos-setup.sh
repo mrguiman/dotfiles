@@ -52,6 +52,12 @@ read bat
 echo "Install Fig (terminal autocomplete) (y/n)?"
 read fig
 [ "$fig" = "y" ] && brew install --cask fig 
+echo "Install ASDF (Runtime versions manager) (y/n)?"
+read asdf
+[ "$asdf" = "y" ] && brew install asdf
+echo "Install ASDF NodeJS Runtime (y/n)?"
+read asdfnode
+[ "$asdfnode" = "y" ] && asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 # Vim Configuration
 brew install vim # install vim through brew to get ruby support
