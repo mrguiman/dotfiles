@@ -1,25 +1,12 @@
 # Ignore everything
 /*
+/.config/*
 
 # Except...
 !.gitignore
 !.vimrc
 !.zshrc
-!.Xresources
 !README.md
-!/vim
-!/.vim
-/.vim/*
-!/.vim/colors
-!/.config
-/.config/*
-!/.config/i3
-!/.config/compton.conf
-!/.config/polybar
-!/.config/rofi
-!/xorg.conf.d
-!/.themes
-!/.fonts
-!/.urxvt
+!/.config/nvim
 !/macos-setup.sh
 !.asdfrc
