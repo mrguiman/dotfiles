@@ -40,6 +40,8 @@ echo "Install ASDF NodeJS Runtime (y/n)?"
 read asdfnode
 echo "Install ripgrep (line-search tool (required for telescope on nvim)"
 read ripgrep
+echo "Install Rust via Rustup (y/n)"
+read rustup
 
 [ "$firefox" = "y" ] && brew install --cask firefox
 [ "$vscode" = "y" ] && brew install --cask visual-studio-code
@@ -59,8 +61,21 @@ fi
 [ "$asdf" = "y" ] && brew install asdf
 [ "$asdfnode" = "y" ] && asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 [ "$ripgrep" = "y" && brew install ripgrep
+[ "$rustup" = "y"] && brew install rustup-init
 
 # NeoVim Configuration
 brew install neovim # install vim through brew to get ruby support
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# Language Server installs
+echo "Select Language Servers to Install"
+echo "Typescript (y/n)"
+read lsp-typescript
+echo "Rust-Analyzer (y/n)"
+read lsp-rust
+
+["$lsp-typescript" = "y"] && npm i -G typescript typescript-language-server
+["$lsp-rust" = "y"] && rustup component add rust-analyzer  
+# Symlink rust-anayzer to path
+sudo ln -s $(rustup which rust-analyzer ) /usr/local/bin/rust-analyzer

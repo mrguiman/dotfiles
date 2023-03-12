@@ -8,5 +8,6 @@
 !.zshrc
 !README.md
 !/.config/nvim
+!/.config/helix
 !/macos-setup.sh
 !.asdfrc
