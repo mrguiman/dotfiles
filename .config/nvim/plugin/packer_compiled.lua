@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/gman/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/gman/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/gman/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -159,24 +164,24 @@ _G.packer_plugins = {
     path = "/Users/gman/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  sonokai = {
+    config = { "\27LJ\2\nÍ\1\0\0\5\0\f\0\0236\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\4\0'\2\5\0B\0\2\0016\0\0\0009\0\6\0009\0\a\0)\2\0\0'\3\b\0005\4\t\0B\0\4\0016\0\0\0009\0\6\0009\0\a\0)\2\0\0'\3\n\0005\4\v\0B\0\4\1K\0\1\0\1\0\1\abg\tnone\16NormalFloat\1\0\1\abg\tnone\vNormal\16nvim_set_hl\bapi\24colorscheme sonokai\bcmd\tmaia\18sonokai_style\6g\bvim\0" },
+    loaded = true,
+    path = "/Users/gman/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/gman/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["zenburn.nvim"] = {
-    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fzenburn\frequire\0" },
-    loaded = true,
-    path = "/Users/gman/.local/share/nvim/site/pack/packer/start/zenburn.nvim",
-    url = "https://github.com/phha/zenburn.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: zenburn.nvim
-time([[Config for zenburn.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fzenburn\frequire\0", "config", "zenburn.nvim")
-time([[Config for zenburn.nvim]], false)
+-- Config for: sonokai
+time([[Config for sonokai]], true)
+try_loadstring("\27LJ\2\nÍ\1\0\0\5\0\f\0\0236\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\4\0'\2\5\0B\0\2\0016\0\0\0009\0\6\0009\0\a\0)\2\0\0'\3\b\0005\4\t\0B\0\4\0016\0\0\0009\0\6\0009\0\a\0)\2\0\0'\3\n\0005\4\v\0B\0\4\1K\0\1\0\1\0\1\abg\tnone\16NormalFloat\1\0\1\abg\tnone\vNormal\16nvim_set_hl\bapi\24colorscheme sonokai\bcmd\tmaia\18sonokai_style\6g\bvim\0", "config", "sonokai")
+time([[Config for sonokai]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

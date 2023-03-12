@@ -1,2 +1,1 @@
-require("jahz.remap")
-require("jahz.set")
+require("jahz.config")
