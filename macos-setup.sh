@@ -26,8 +26,8 @@ echo "Install Slack (y/n)?"
 read slack
 echo "Install Discord (y/n)?"
 read discord
-echo "Install Spectacle (y/n)?"
-read spectacle
+echo "Install Rectangle (Window Manager) (y/n)?"
+read rectangle
 echo "Install Firacode Font (y/n)?"
 read firacode
 echo "Install Bat (superpowered cat) (y/n)?"
@@ -51,7 +51,7 @@ read rustup
 [ "$notion" = "y" ] && brew install --cask notion
 [ "$slack" = "y" ] && brew install --cask slack
 [ "$discord" = "y" ] && brew install --cask discord
-[ "$spectacle" = "y" ] && brew install --cask spectacle
+[ "$rectangle" = "y" ] && brew install --cask rectangle
 if [[ "$firacode" = "y" ]]; then
   brew tap homebrew/cask-fonts
   brew install --cask font-fira-code-nerd-font
