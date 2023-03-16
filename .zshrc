@@ -11,8 +11,6 @@ RPROMPT='${vcs_info_msg_0_}'
 
 neofetch
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/gman/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gman/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -21,3 +19,8 @@ if [ -f '/Users/gman/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/
 
 alias gpf='git push --force-with-lease'
 alias glo='git log --pretty="oneline"'
+alias parrot='docker run -ti --platform linux/x86_64 --network host -v ~/parrot_work:/work parrotsec/security'
+alias vim='nvim'
+alias cat='bat'
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
