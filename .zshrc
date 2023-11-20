@@ -24,3 +24,8 @@ alias vim='nvim'
 alias cat='bat'
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+. ~/.asdf/plugins/golang/set-env.zsh
+
+export GOPATH=$HOME/go
+export PATH=/usr/local/opt/llvm/bin:$PATH:$GOROOT/bin:$GOPATH/bin
+export ASDF_GOLANG_MOD_VERSION_ENABLED=false
