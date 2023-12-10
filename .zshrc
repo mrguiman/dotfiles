@@ -6,7 +6,7 @@ precmd_functions+=( precmd_vcs_info )
 zstyle ':vcs_info:git:*' formats '%b'
 setopt prompt_subst
 
-PROMPT=' '%5~%F{172}' %B❖%b '%f
+PROMPT=' '%5~%F{172}' %B❖%b  '%f
 RPROMPT='${vcs_info_msg_0_}'
 
 neofetch
