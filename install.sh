@@ -41,6 +41,9 @@ if [[ "$firacode" = "y" ]]; then
 	sudo pamac install ttf-firacode-nerd --no-confirm
 	sudo pamac install ttf-firacode --no-confirm
 fi
+echo "Install Fontawesome Font (y/n)?"
+read fontawesome
+[ "$fontawesome" = "y" ] && sudo pamac install otf-font-awesome --no-confirm 
 echo "Install ASDF (Runtime versions manager) (y/n)?"
 read asdf
 [ "$asdf" = "y" ] && sudo pamac install asdf-vm --no-confirm 
@@ -57,6 +60,13 @@ read ripgrep
 echo "Install Rust via Rustup (y/n)"
 read rustup
 [ "$rustup" = "y" ] && sudo pacman -S rustup --needed --noconfirm 
+echo "Install sway and utilities ?"
+read sway
+if [[ "$sway" = "y" ]]; then
+    sudo pacman -Sy sway
+    sudo pacman -Sy slurp
+    sudo pacman -Sy grim
+fi
 
 # NeoVim Configuration
 # Language Server installs
@@ -66,10 +76,15 @@ read lsp_typescript
 echo "Rust-Analyzer (y/n)"
 read lsp_rust
 
+
 [ "$lsp_typescript" = "y" ] && npm i -G typescript typescript-language-server
 if [[ "$lsp_rust" = "y" ]]; then
 	rustup default stable
-	rustup component add rust-analyzer  
+	rustup component add rust-analyzer
     # Symlink rust-anayzer to path
     sudo ln -s $(rustup which rust-analyzer ) /usr/local/bin/rust-analyzer
 fi
+
+
+# Cleanup
+sudo pacman -Qtdq | sudo pacman -Rns -
