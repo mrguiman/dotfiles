@@ -188,7 +188,7 @@ input type:touchpad {
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
     bindsym XF86Search exec bemenu-run
-    bindsym Print exec /usr/share/sway/scripts/grimshot --notify save area  ~/Pictures/Screenshots/screenshot_$(date "+%y%m%d%H%M%S").png
+    bindsym Print exec wl-copy < $(/usr/share/sway/scripts/grimshot --notify save area  ~/Pictures/Screenshots/screenshot_$(date "+%y%m%d%H%M%S").png)
 #
 # Scratchpad:
 #
