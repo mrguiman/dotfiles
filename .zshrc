@@ -17,15 +17,29 @@ if [ -f '/Users/gman/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/gman/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gman/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
+
+# Aliases
 alias gpf='git push --force-with-lease'
 alias glo='git log --pretty="oneline"'
 alias parrot='docker run -ti --platform linux/x86_64 --network host -v ~/parrot_work:/work parrotsec/security'
 alias vim='nvim'
 alias cat='bat'
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-. ~/.asdf/plugins/golang/set-env.zsh
 
+# Asdf post-install
+. /opt/asdf-vm/asdf.sh
+
+
+# Golang setup with ASDF
+GOLANG_SET_ENV=~/.asdf/plugins/golang/set-env.zsh
+if [ -f $GOLANG_SET_ENV ]; then
+	. ~/.asdf/plugins/golang/set-env.zsh
+fi
 export GOPATH=$HOME/go
-export PATH=/usr/local/opt/llvm/bin:$PATH:$GOROOT/bin:$GOPATH/bin
 export ASDF_GOLANG_MOD_VERSION_ENABLED=false
+export PATH=/usr/local/opt/llvm/bin:$PATH:$GOROOT/bin:$GOPATH/bin
+
+if [ "$XDG_SESSION_DESKTOP" = "sway" ] ; then
+    # https://github.com/swaywm/sway/issues/595
+    export _JAVA_AWT_WM_NONREPARENTING=1
+fi
