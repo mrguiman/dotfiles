@@ -251,3 +251,5 @@ gaps inner 4
 
 exec mako
 include /etc/sway/config.d/*
+# Enables inhibit_idle when playing audio
+exec sway-audio-idle-inhibit
