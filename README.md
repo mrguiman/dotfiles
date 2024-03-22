@@ -1,3 +1,3 @@
-# dotfiles
+# dotfiles (Arch + Hyprland Version)
 
-Switch to an existing branch to get started
+Switched back to arch, this time using hyprland. Tried to stay in the hypr ecosystem whenever possible
