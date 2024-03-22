@@ -1,24 +1,20 @@
 {
     "layer": "top", // Waybar at top layer
-        "position": "top", // Waybar position (top|bottom|left|right)
-                           // "height": 36, // Waybar height (to be removed for auto height)
-                           // Archived modules
-                           // "custom/gpu", "bluetooth",  "custom/weather", "temperature", "sway/window"
-                           // Choose the order of the modules
-        "modules-left": [ "clock", "idle_inhibitor", "hyprland/window", "custom/media"],
-        "modules-center": ["hyprland/workspaces"],
-        "modules-right": [ "cpu", "battery", "network", "pulseaudio", "tray"],
+        "position": "top",
+        "modules-left": ["hyprland/workspaces", "custom/media"],
+        "modules-center": ["hyprland/window"],
+        "modules-right": ["idle_inhibitor", "custom/power_profile", "battery", "network", "bluetooth", "pulseaudio", "clock", "tray"],
         // Modules configuration
         "hyprland/workspaces": {
             "disable-scroll": true,
             "all-outputs": true,
         },
         "battery": {
-            "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>     {capacity}%",
-            "format-icons": ["", "", "", "", ""],
+            "format": "<span rise='700' size='small'>{capacity}% </span>{icon}",
+            "format-icons": [" ", " ", " ", " ", " "],
             "format-time": "{H}h{M}m",
-            "format-charging": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}%",
-            "format-full": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> Charged",
+            "format-charging": "{icon} {capacity}%",
+            "format-full": "{icon} Charged",
             "interval": 30,
             "states": {
                 "warning": 25,
@@ -27,21 +23,29 @@
             "tooltip": false,
             "on-click": "2"
         },
+        "custom/power_profile": {
+            "exec": "sleep 0.3 && $HOME/.config/ppd-cycle.sh -m",
+            "interval": 120,
+            "on-click": "$HOME/.config/ppd-cycle.sh",
+            "exec-on-event": true,
+            "tooltip": true,
+            "tooltip-format": "Power Profile"
+        },
         "bluetooth": {
             "interval": 30,
             "format": "{icon}",
             // "format-alt": "{status}",
             "format-icons": {
-                "enabled": "",
-                "disabled": ""
+                "enabled": "",
+                "disabled": "!"
             },
             "on-click": "blueberry"
         },    
         "idle_inhibitor": {
             "format": "{icon}",
             "format-icons": {
-                "activated": "",
-                "deactivated": ""
+                "activated": " ",
+                "deactivated": " "
             },
             "tooltip": "true"
         },
@@ -50,7 +54,7 @@
             "spacing": 5
         },
         "clock": {
-            "format": "  {:%H:%M     %e %b}",
+            "format": "{:%e %b - %H:%M}  ",
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "today-format": "<b>{}</b>",
             "on-click": "gnome-calendar"
@@ -76,9 +80,9 @@
         },
         "network": {
             // "interface": "wlan0", // (Optional) To force the use of this interface,
-            "format-wifi": "   {essid}",
-            "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-            "format-linked": "{ifname} (No IP) ",
+            "format-wifi": " ",
+            "format-ethernet": "{ifname}: {ipaddr}/{cidr}  ",
+            "format-linked": "{ifname} (No IP)  ",
             "format-disconnected": "",
             "format-alt": "{ifname}: {ipaddr}/{cidr}",
             "family": "ipv4",
@@ -87,11 +91,11 @@
         },
         "pulseaudio": {
             "scroll-step": 3, // %, can be a float
-            "format": "{icon} {volume}% {format_source}",
-            "format-bluetooth": "{volume}% {icon} {format_source}",
-            "format-bluetooth-muted": " {icon} {format_source}",
-            "format-muted": " {format_source}",
-            //"format-source": "{volume}% ",
+            "format": "{volume}%  <span rise='-1500' size='x-large'>{icon}</span>",
+            "format-bluetooth": "{volume}%  {icon}",
+            "format-bluetooth-muted": "   {icon}",
+            "format-muted": "",
+            // "format-source": "{volume}% ",
             "format-source-muted": "",
             "format-source": "",
             "format-source-muted": "",
