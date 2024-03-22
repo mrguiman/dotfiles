@@ -15,7 +15,8 @@ sudo pacman -S grim xdg-desktop-portal-hyprland xdg-desktop-portal qt5-wayland q
 sudo pacman -S brightnessctl --needed --noconfirm
 
 # Wifi and Bluetooth
-sudo pacman -S networkmanager blueman --needed --noconfirm
+sudo pacman -S networkmanager bluez blueman --needed --noconfirm
+systemctl --user --now enable bluetooth.service
 
 # Audio 
 sudo pacman -S pipewire wireplumber pipewire-pulse pavucontrol --needed --noconfirm
