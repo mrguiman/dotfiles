@@ -1,11 +1,9 @@
 require("mason").setup()
-
+require("mason-lspconfig").setup {
+    ensure_installed = { "lua_ls", "rust_analyzer" },
+}
 require("jahz.lsp.config")
 require("jahz.lsp.keymaps")
-
-vim.diagnostic.config({
-  virtual_text = false, -- Turn off inline diagnostics
-})
 
 -- LSP Floating Window Style
 local _border = "single"
