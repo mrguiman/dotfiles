@@ -18,20 +18,20 @@ require("lazy").setup({
 
     -- Browsing and searching
     { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" },
-        config = function()
-            local builtin = require('telescope.builtin')
-            vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-            vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
-            vim.keymap.set('n', '<leader>gf', function()
-                builtin.grep_string({ search = vim.fn.input("Grep > ") });
-            end)
-        end
-    },
-    { "nvim-telescope/telescope-file-browser.nvim",  dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
-        config = function()
-            vim.api.nvim_set_keymap("n", "<leader>b", ":Telescope file_browser<CR>", { noremap = true }) -- open file browser
-            vim.api.nvim_set_keymap("n", "<leader>cb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true }) -- open file browser on the path of the current buffer
-        end
+    config = function()
+        local builtin = require('telescope.builtin')
+        vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+        vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
+        vim.keymap.set('n', '<leader>gf', function()
+            builtin.grep_string({ search = vim.fn.input("Grep > ") });
+        end)
+    end
+},
+{ "nvim-telescope/telescope-file-browser.nvim",  dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
+config = function()
+    vim.api.nvim_set_keymap("n", "<leader>b", ":Telescope file_browser<CR>", { noremap = true }) -- open file browser
+    vim.api.nvim_set_keymap("n", "<leader>cb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true }) -- open file browser on the path of the current buffer
+end
     },
 
     -- Highlighting, colors, status line
@@ -47,7 +47,7 @@ require("lazy").setup({
             vim.cmd('highlight EndOfBuffer guibg=none')
             vim.cmd('highlight NvimTreeNormal guibg=none')
             vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---            vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+            --            vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
         end
     },
 
@@ -60,6 +60,16 @@ require("lazy").setup({
 
     { "L3MON4D3/LuaSnip", dependencies = { "rafamadriz/friendly-snippets" }}, -- snippet engine, required by nvim-cmp
     "saadparwaiz1/cmp_luasnip",
+
+    {
+        'mrcjkb/rustaceanvim',
+        version = '^4',
+        init = function()
+            -- Configure rustaceanvim here
+            vim.g.rustaceanvim = {}
+        end,
+        ft = { 'rust' },
+    },
 
 
     -- LSP

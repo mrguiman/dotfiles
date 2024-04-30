@@ -9,3 +9,4 @@ vim.opt.wrap = false -- Line wrapping
 vim.opt.termguicolors = true -- Enable 24-bit RGB color. Uses GUI attriutes for highlight instead of cterm
 vim.opt.scrolloff = 8 -- Display Lines underneath / above cursor when scrolling
 vim.opt.cmdheight = 0 -- Height of the cmd line. Setting to 0 will replace the statusline when entering a command
+vim.o.exrc = true

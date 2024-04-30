@@ -5,7 +5,7 @@
 /* COLORS */
 
 /* Nord */
-@define-color bg rgba(46,52,64,0.5);
+@define-color bg rgba(56,62,64,0.1);
 /*@define-color bg #353C4A;*/
 @define-color light #D8DEE9;
 /*@define-color dark @nord_dark_font;*/
@@ -46,6 +46,7 @@
 }
 
 /* Each module */
+#memory,
 #battery,
 #clock,
 #bluetooth,
@@ -57,10 +58,11 @@
 #language,
 #idle_inhibitor,
 #custom-power_profile {
+    font-size: 14px;
     padding-left: 1.4em;
 }
-#battery, #network, #bluetooth, #idle_inhibitor, #custom-power_profile {
-    font-size: 16px;
+#battery, #memory, #network, #bluetooth, #idle_inhibitor, #custom-power_profile {
+    font-size: 15px;
 }
 /* Each module that should blink */
 #mode,
