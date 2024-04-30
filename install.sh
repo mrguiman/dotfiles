@@ -6,7 +6,7 @@
 sudo pacman -Syu
 
 # General stuff
-sudo pacman -S git zsh kitty dunst thunar gthumb fastfetch wl-clipboard otf-font-awesome --needed --noconfirm
+sudo pacman -S git zsh kitty dunst thunar thunar-archive-plugin tumbler gthumb fastfetch wl-clipboard otf-font-awesome --needed --noconfirm
 
 # Screenshots and Screen sharing
 sudo pacman -S grim xdg-desktop-portal-hyprland xdg-desktop-portal qt5-wayland qt6-wayland --needed --noconfirm
@@ -15,7 +15,7 @@ sudo pacman -S grim xdg-desktop-portal-hyprland xdg-desktop-portal qt5-wayland q
 sudo pacman -S brightnessctl --needed --noconfirm
 
 # Wifi and Bluetooth
-sudo pacman -S networkmanager bluez blueman --needed --noconfirm
+sudo pacman -S networkmanager blueberry --needed --noconfirm
 systemctl --user --now enable bluetooth.service
 
 # Audio 
@@ -51,7 +51,12 @@ read ripgrep
 echo "Install Rust via Rustup (y/n)"
 read rustup
 [ "$rustup" = "y" ] && sudo pacman -S rustup --needed --noconfirm 
-
+echo "Install Obsidian (y/n)?"
+read obsidian
+[ "$obsidian" = "y" ] && sudo pacman -S obsidian --needed --noconfirm
+echo "Install Discord (y/n)?"
+read discord
+[ "$discord" = "y" ] && sudo pacman -S discord --needed --noconfirm
 
 # AUR and Other Stuff
 echo "Install SWWW and Waypaper ?"
@@ -72,15 +77,9 @@ if [[ "$asdfnode" = "y" ]]; then
 	asdf install nodejs latest
 	asdf global nodejs latest
 fi
-# echo "Install Obsidian (y/n)?"
-# read obsidian
-# [ "$obsidian" = "y" ] && sudo pamac install obsidian --noconfirm 
 # echo "Install Docker (y/n)?"
 # read docker
 # [ "$docker" = "y" ] && sudo pamac install docker-desktop --noconfirm
-# echo "Install Discord (y/n)?"
-# read discord
-# [ "$discord" = "y" ] && sudo pamac install discord --noconfirm 
 
 # NeoVim Configuration
 # Language Server installs
