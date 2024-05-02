@@ -59,9 +59,15 @@ fi
 [ "$bat" = "y" ] && brew install bat 
 [ "$fig" = "y" ] && brew install --cask fig 
 [ "$asdf" = "y" ] && brew install asdf
-[ "$asdfnode" = "y" ] && asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-[ "$ripgrep" = "y" && brew install ripgrep
-[ "$rustup" = "y"] && brew install rustup-init
+if [[ "$asdfnode" = "y" ]]; then
+	asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+	asdf install nodejs latest
+fi
+[ "$ripgrep" = "y" ] && brew install ripgrep
+if [[ "$rustup" = "y" ]]; then
+      brew install rustup-init
+      . "$HOME/.cargo/env"
+fi
 
 # NeoVim Configuration
 brew install neovim # install vim through brew to get ruby support
@@ -71,11 +77,11 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 # Language Server installs
 echo "Select Language Servers to Install"
 echo "Typescript (y/n)"
-read lsp-typescript
+read lspTypescript
 echo "Rust-Analyzer (y/n)"
-read lsp-rust
+read lspRust
 
-["$lsp-typescript" = "y"] && npm i -G typescript typescript-language-server
-["$lsp-rust" = "y"] && rustup component add rust-analyzer  
+[ "$lspTypescript" = "y" ] && npm i -G typescript typescript-language-server
+[ "$lspRust" = "y" ] && rustup component add rust-analyzer
 # Symlink rust-anayzer to path
 sudo ln -s $(rustup which rust-analyzer ) /usr/local/bin/rust-analyzer
