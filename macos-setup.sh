@@ -42,6 +42,12 @@ echo "Install ripgrep (line-search tool (required for telescope on nvim)"
 read ripgrep
 echo "Install Rust via Rustup (y/n)"
 read rustup
+echo "Install just (make alternative)"
+read justmake
+
+
+echo "--------- STARTING INSTALLATIONS ----------"
+
 
 [ "$firefox" = "y" ] && brew install --cask firefox
 [ "$vscode" = "y" ] && brew install --cask visual-studio-code
@@ -68,6 +74,7 @@ if [[ "$rustup" = "y" ]]; then
       brew install rustup-init
       . "$HOME/.cargo/env"
 fi
+[ "$justmake" = "y" ] && brew install just
 
 # NeoVim Configuration
 brew install neovim # install vim through brew to get ruby support
@@ -85,3 +92,12 @@ read lspRust
 [ "$lspRust" = "y" ] && rustup component add rust-analyzer
 # Symlink rust-anayzer to path
 sudo ln -s $(rustup which rust-analyzer ) /usr/local/bin/rust-analyzer
+
+
+echo "--------- DONE INSTALLING PACKAGES ----------"
+echo "Some thing you might want to do now:"
+echo "- cp ./.zshrc ~/.zshrc"
+echo "- cp -r ./.config/nvim ~/.config/"
+echo "- Setup an ssh key for github"
+echo "- Login to firefox and configure your extensions"
+echo "- Login to VSCode and configure your extensions"

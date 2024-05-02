@@ -5,9 +5,12 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
-# Git and Autocomplete
+# Completion
+fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 autoload -Uz compinit && compinit
 autoload -Uz vcs_info
+
+# Git completion
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 zstyle ':vcs_info:git:*' formats '%b'
