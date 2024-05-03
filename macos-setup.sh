@@ -2,7 +2,7 @@
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Add /opt/homebrew/bin to PATH for Apple Silicon brew packages
-[ -d "/opt/homebrew" ] && echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/gman/.zprofile
+[ -d "/opt/homebrew" ] && echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 [ -d "/opt/homebrew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if [[ `uname -m` == 'arm64' ]]; then
